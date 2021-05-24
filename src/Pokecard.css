@@ -1,0 +1,14 @@
+.Pokecard-div {
+    background-color: rgb(204, 204, 204);
+    border-radius: 15px;
+    display: inline-block;
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+
+}
+
+.Pokecard-name {
+    color:blue;
+}
