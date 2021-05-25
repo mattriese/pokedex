@@ -1,9 +1,9 @@
 import './App.css';
-import Pokedex from "./Pokedex";
+import Pokegame from "./Pokegame";
 
 /** App component - Renders Pokedex */
 function App() {
-  return <Pokedex/>
+  return <Pokegame/>
 }
 
 export default App;

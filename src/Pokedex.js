@@ -3,26 +3,29 @@ import "./Pokedex.css";
 
 /**Pokedex component - renders a pokecard for all Pokemons in pokemons array */
 function Pokedex(props) {
-  let pokedex = props.pokemon.map(p => {
+  let pokedex = props.pokemons.map(p => {
     return (
-    <Pokecard 
-      id={p.id} 
-      name={p.name} 
-      type={p.type} 
-      base_experience={p.base_experience} 
+    <Pokecard
+      id={p.id}
+      name={p.name}
+      type={p.type}
+      base_experience={p.base_experience}
       />
     )
   })
 
   return (
     <div className="Pokedex-div">
-      <h1>Pokedex</h1>
       {pokedex}
+      <h4>Score: {props.score}</h4>
+      <h2 className="Pokedex-winner">
+        { props.isWinner ? "THIS HAND WINS!" : ""}
+      </h2>
     </div>
   )
 }
 
-Pokedex.defaultprops = { pokemon: [
+Pokedex.defaultProps = { pokemons: [
   { id: 4, name: 'Charmander', type: 'fire', base_experience: 62 },
   { id: 7, name: 'Squirtle', type: 'water', base_experience: 63 },
   { id: 11, name: 'Metapod', type: 'bug', base_experience: 72 },
